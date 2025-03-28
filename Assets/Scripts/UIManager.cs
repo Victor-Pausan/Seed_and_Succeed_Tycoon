@@ -6,10 +6,12 @@ public class UIManager : MonoBehaviour
 {
     public GameObject room;
     public GameObject computerScreen;
+    public GameObject futuresCanvas;
     
     public Button takeLoanButton;
     public Button runAdButton;
     public Button hireEmployeeButton;
+    
     //public GameObject upgradePanel;
     public TMP_InputField loanAmountInput; // Assign in Inspector
 
@@ -39,6 +41,7 @@ public class UIManager : MonoBehaviour
     {
         room.SetActive(true);
         computerScreen.SetActive(false);
+        futuresCanvas.SetActive(false);
     }
 
     // public void ToggleUpgradePanel()
