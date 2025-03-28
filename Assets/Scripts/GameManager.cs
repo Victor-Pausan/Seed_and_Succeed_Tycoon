@@ -2,6 +2,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Net.Mime;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,11 +19,22 @@ public class GameManager : MonoBehaviour
     private float repaymentAmount = 0f; // Repayment rate, starts with a base value
     private int adCampaigns = 0;
     private bool eligibleToBuyAd = false;
+<<<<<<< aba88094fa5ef074156755298690050001224834
+=======
+    private float baseHireCost = 30f;
+    public float maxAmountToLoan = 0 ;
+>>>>>>> modified UI
 
     public TextMeshProUGUI suprText;
     public TextMeshProUGUI loanText;
     public TextMeshProUGUI collatertalText;
     public TextMeshProUGUI runAdText;
+<<<<<<< aba88094fa5ef074156755298690050001224834
+=======
+    public TextMeshProUGUI employeesText; // New UI to display employee count
+    public TextMeshProUGUI maxAmountLoan;
+    public TextMeshProUGUI repaymentRatio;
+>>>>>>> modified UI
 
     void Awake()
     {
@@ -47,11 +60,23 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+<<<<<<< aba88094fa5ef074156755298690050001224834
         // Only update UI if references exist
         if (suprText != null) suprText.text = $"SUPR: {suprBalance:F2}";
         if (loanText != null) loanText.text = $"Loan: {loanBalance:F2} SUPR";
         if (collatertalText != null) collatertalText.text = $"Collateral: {collateralBalance:F2} SUPR";
         if (runAdText != null) runAdText.text = $"Run ad campaign: {adCost:F2} SUPR";
+=======
+        maxAmountToLoan = suprBalance / loanCollateralRatio;
+        // Update UI if references exist
+        if (suprText != null) suprText.text = $"SUPR balance: {suprBalance:F2} (loan up to {maxAmountToLoan})";
+        if (loanText != null) loanText.text = $"Loaned: {loanBalance:F2} SUPR";
+        if (collatertalText != null) collatertalText.text = $"Collateral SUPR: {collateralBalance:F2}";
+        if (runAdText != null) runAdText.text = $"Run ad campaign: {adCost:F2} SUPR";
+        if (employeesText != null) employeesText.text = $"Hire employee: {baseHireCost} SUPR";
+        if (maxAmountLoan != null) maxAmountLoan.text = $"Max amount to loan: {maxAmountToLoan}";
+        if (repaymentRatio != null) repaymentRatio.text = $"Repayment ratio: {repaymentAmount} supr/s";
+>>>>>>> modified UI
     }
 
     public void TakeLoan(float amount)
@@ -120,8 +145,26 @@ public class GameManager : MonoBehaviour
 
     public void HireEmployee()
     {
+<<<<<<< aba88094fa5ef074156755298690050001224834
         float cost = 100f;
         if (suprBalance >= cost)
+=======
+        float hireCost = baseHireCost * Mathf.Pow(1.5f, employees); // Cost increases with each hire
+
+        if (suprBalance >= hireCost && eligibleToBuyAd)
+        {
+            suprBalance -= hireCost;
+            employees += 1;
+
+            // Employee benefits
+            adEffectiveness += 0.5f; // Increase ad effectiveness
+            baseRepaymentRate += 0.02f; // Increase base repayment rate
+            repaymentAmount = baseRepaymentRate + (adCampaigns > 0 ? repaymentAmount - baseRepaymentRate : 0); // Update total repayment rate
+
+            Debug.Log($"Employee hired! Total: {employees}, Cost: {hireCost:F2}, New ad effectiveness: {adEffectiveness}, New base repayment rate: {baseRepaymentRate}");
+        }
+        else
+>>>>>>> modified UI
         {
             suprBalance -= cost;
             employees++;
