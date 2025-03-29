@@ -7,6 +7,9 @@ public class UIManager : MonoBehaviour
     public GameObject room;
     public GameObject computerScreen;
     public GameObject futuresCanvas;
+    public GameObject carsShopCanvas;
+    public GameObject bidGameCanvas;
+    public GameObject garage;
     
     public Button takeLoanButton;
     public Button runAdButton;
@@ -37,11 +40,54 @@ public class UIManager : MonoBehaviour
         });
     }
 
+    public void OpenShop()
+    {
+        garage.SetActive(false);
+        bidGameCanvas.SetActive(false);
+        room.SetActive(false);
+        computerScreen.SetActive(false);
+        futuresCanvas.SetActive(false);
+        carsShopCanvas.SetActive(true);
+    }
+
+    public void OpenFutures()
+    {
+        garage.SetActive(false);
+        bidGameCanvas.SetActive(false);
+        room.SetActive(false);
+        computerScreen.SetActive(false);
+        futuresCanvas.SetActive(true);
+        carsShopCanvas.SetActive(false);
+    }
+
+    public void OpenBidGame()
+    {
+        garage.SetActive(false);
+        bidGameCanvas.SetActive(true);
+        room.SetActive(false);
+        computerScreen.SetActive(false);
+        futuresCanvas.SetActive(false);
+        carsShopCanvas.SetActive(false);
+    }
+
+    public void OpenGarage()
+    {
+        garage.SetActive(true);
+        bidGameCanvas.SetActive(false);
+        room.SetActive(false);
+        computerScreen.SetActive(false);
+        futuresCanvas.SetActive(false);
+        carsShopCanvas.SetActive(false);
+    }
+    
     public void ReturnToRoom()
     {
+        garage.SetActive(false);
+        bidGameCanvas.SetActive(false);
         room.SetActive(true);
         computerScreen.SetActive(false);
         futuresCanvas.SetActive(false);
+        carsShopCanvas.SetActive(false);
     }
 
     // public void ToggleUpgradePanel()
