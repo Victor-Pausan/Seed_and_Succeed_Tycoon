@@ -16,14 +16,23 @@ public class GameManager : MonoBehaviour
     public int employees = 0;
     public float adCost = 10f; // Starting ad cost
     public float collateralBalance = 0f;
+<<<<<<< aba88094fa5ef074156755298690050001224834
     private float repaymentAmount = 0f; // Repayment rate, starts with a base value
+=======
+    public static float repaymentAmount = 0f; // Total repayment rate (base + campaign boosts)
+    private float baseRepaymentRate = 0.05f; // Passive repayment rate, increased by employees
+>>>>>>> finished jumping game
     private int adCampaigns = 0;
     private bool eligibleToBuyAd = false;
 <<<<<<< aba88094fa5ef074156755298690050001224834
 =======
     private float baseHireCost = 30f;
     public float maxAmountToLoan = 0 ;
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> modified UI
+=======
+    public static float collectedCoins = 0;
+>>>>>>> finished jumping game
 
     public TextMeshProUGUI suprText;
     public TextMeshProUGUI loanText;

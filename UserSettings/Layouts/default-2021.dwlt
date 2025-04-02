@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -1536
-    y: 336.2
-    width: 1536
-    height: 772.8
+    x: 1536
+    y: 43
+    width: 1920
+    height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1536
-    height: 772.8
+    width: 1920
+    height: 989
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1536
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 752.8
-    width: 1536
+    y: 969
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1536
-    height: 722.8
+    width: 1920
+    height: 939
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 30
+  controlID: 102
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,11 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1170.4
-    height: 722.8
+    width: 1462
+    height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -157,6 +158,9 @@ MonoBehaviour:
 =======
   controlID: 18
 >>>>>>> created jumping game
+=======
+  controlID: 90
+>>>>>>> finished jumping game
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,6 +180,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
     width: 1172.8
@@ -208,6 +213,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 19
 >>>>>>> created jumping game
+=======
+    width: 1462
+    height: 553
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 91
+>>>>>>> finished jumping game
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,6 +238,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -248,6 +262,12 @@ MonoBehaviour:
     height: 425.6
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    width: 357
+    height: 553
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> finished jumping game
   m_ActualView: {fileID: 14}
 >>>>>>> created jumping game
   m_Panes:
@@ -269,8 +289,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 285.6
+    x: 357
     y: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -289,6 +310,10 @@ MonoBehaviour:
     width: 884.80005
     height: 425.6
 >>>>>>> created jumping game
+=======
+    width: 1105
+    height: 553
+>>>>>>> finished jumping game
   m_MinSize: {x: 202, y: 221}
 >>>>>>> added menu garage and bid game
   m_MaxSize: {x: 4002, y: 4021}
@@ -308,12 +333,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -339,11 +365,19 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
 >>>>>>> created jumping game
+=======
+    y: 553
+    width: 1462
+    height: 386
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 16}
+>>>>>>> finished jumping game
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -359,12 +393,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1170.4
+    x: 1462
     y: 0
-    width: 365.59998
-    height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 458
+    height: 939
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -415,10 +449,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -444,6 +479,12 @@ MonoBehaviour:
     width: 882.80005
     height: 404.6
 >>>>>>> created jumping game
+=======
+    x: 1893
+    y: 73
+    width: 1103
+    height: 532
+>>>>>>> finished jumping game
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -457,6 +498,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
   m_TargetSize: {x: 880.4, y: 386}
 =======
   m_TargetSize: {x: 854, y: 480.5}
@@ -467,6 +509,9 @@ MonoBehaviour:
 =======
   m_TargetSize: {x: 682, y: 383.6}
 >>>>>>> created jumping game
+=======
+  m_TargetSize: {x: 908, y: 511}
+>>>>>>> finished jumping game
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -481,6 +526,7 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -506,6 +552,12 @@ MonoBehaviour:
     m_VBaseRangeMin: -153.44
     m_VBaseRangeMax: 153.44
 >>>>>>> created jumping game
+=======
+    m_HBaseRangeMin: -454
+    m_HBaseRangeMax: 454
+    m_VBaseRangeMin: -255.5
+    m_VBaseRangeMax: 255.5
+>>>>>>> finished jumping game
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -523,6 +575,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -548,12 +601,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 441.40002, y: 191.8}
 >>>>>>> created jumping game
+=======
+      width: 1103
+      height: 511
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 551.5, y: 255.5}
+>>>>>>> finished jumping game
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -591,6 +651,15 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1103.5, y: 505.75}
 >>>>>>> created jumping game
+=======
+      x: -551.5
+      y: -255.5
+      width: 1103
+      height: 511
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1103, y: 532}
+>>>>>>> finished jumping game
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -612,10 +681,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -641,12 +711,19 @@ MonoBehaviour:
     width: 284.6
     height: 404.6
 >>>>>>> created jumping game
+=======
+    x: 1536
+    y: 73
+    width: 356
+    height: 532
+>>>>>>> finished jumping game
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
       scrollPos: {x: 0, y: 0}
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -670,17 +747,23 @@ MonoBehaviour:
       m_LastClickedID: 28626
       m_ExpandedIDs: 2eeaffff2cfaffff28fbffff8e6c0000ec6c0000446d00001c6e0000366e00000c6f00004c6f00003a700000
 >>>>>>> created jumping game
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 103afdffee3bfdff783dfdff5e3ffdff3a41fdff32ceffff6af5ffff04faffff08faffff40faffff18fbffff606c0000b86c00001e7000002670000072700000
+>>>>>>> finished jumping game
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GameManager
-        m_OriginalName: GameManager
+        m_Name: room
+        m_OriginalName: room
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 28620
+        m_UserData: 28130
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -709,10 +792,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -738,6 +822,12 @@ MonoBehaviour:
     width: 882.80005
     height: 404.6
 >>>>>>> created jumping game
+=======
+    x: 1893
+    y: 73
+    width: 1103
+    height: 532
+>>>>>>> finished jumping game
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -748,12 +838,17 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: -100, y: -25.600006}
 =======
       snapOffset: {x: -101, y: -26}
       snapOffsetDelta: {x: 0, y: 0}
 >>>>>>> modified UI
+=======
+      snapOffset: {x: -101, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: -0.3999939}
+>>>>>>> finished jumping game
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -763,7 +858,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: -141, y: 148}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
@@ -774,7 +869,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -818,7 +913,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -969,6 +1064,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_Target: {x: 0, y: 0, z: -10}
     speed: 2
     m_Value: {x: 0, y: 0, z: -10}
@@ -987,6 +1083,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 1.4860821, y: 0.12302001, z: -9.944355}
 >>>>>>> created jumping game
+=======
+    m_Target: {x: -0.58329445, y: 0.3287145, z: -0.05020258}
+    speed: 2
+    m_Value: {x: -0.58329445, y: 0.3287145, z: -0.05020258}
+>>>>>>> finished jumping game
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1040,6 +1141,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_Target: 12.124355
     speed: 2
     m_Value: 12.124355
@@ -1058,6 +1160,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 6.569618
 >>>>>>> created jumping game
+=======
+    m_Target: 6.8270884
+    speed: 2
+    m_Value: 6.8270884
+>>>>>>> finished jumping game
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1098,10 +1205,11 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -1125,6 +1233,12 @@ MonoBehaviour:
     width: 1169.4
     height: 276.19998
 >>>>>>> created jumping game
+=======
+    x: 1536
+    y: 626
+    width: 1461
+    height: 365
+>>>>>>> finished jumping game
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1144,6 +1258,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     - Assets/Scripts
 =======
     - Assets/Free 2D Demo Character sprite sheet
@@ -1151,11 +1266,15 @@ MonoBehaviour:
 =======
     - Assets/Prefabs
 >>>>>>> added menu garage and bid game
+=======
+    - Assets/Scenes
+>>>>>>> finished jumping game
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
   - Assets/Scripts
@@ -1173,11 +1292,15 @@ MonoBehaviour:
 =======
   - Assets/Prefabs
 >>>>>>> added menu garage and bid game
+=======
+  - Assets/Scenes
+>>>>>>> finished jumping game
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\pausa\Unity\Superseed_tycoon_game\SuperSeed_Tycoon_Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
     scrollPos: {x: 0, y: 36.600006}
@@ -1197,6 +1320,12 @@ MonoBehaviour:
     m_LastClickedID: 30286
     m_ExpandedIDs: 000000006e740000707400005676000000ca9a3b
 >>>>>>> created jumping game
+=======
+    scrollPos: {x: 0, y: 47}
+    m_SelectedIDs: c6760000
+    m_LastClickedID: 30406
+    m_ExpandedIDs: 000000009276000094760000be760000c8760000707e00000886000000ca9a3b
+>>>>>>> finished jumping game
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1227,6 +1356,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_ExpandedIDs: 0000000060710000
 =======
     m_ExpandedIDs: 000000001c720000
@@ -1237,6 +1367,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000006e74000070740000
 >>>>>>> created jumping game
+=======
+    m_ExpandedIDs: 000000009276000094760000
+>>>>>>> finished jumping game
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1261,9 +1394,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 00faffff
-    m_LastClickedInstanceID: -1536
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1280,7 +1413,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1289,10 +1422,14 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
 =======
     m_ScrollPosition: {x: 0, y: 150.80002}
+=======
+    m_ScrollPosition: {x: 0, y: 0}
+>>>>>>> finished jumping game
     m_GridSize: 96
 >>>>>>> created jumping game
   m_SkipHiddenPackages: 0
@@ -1313,10 +1450,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
     x: 0
@@ -1338,6 +1476,10 @@ MonoBehaviour:
 =======
     x: -1536
     y: 792.2
+=======
+    x: 0
+    y: 499.2
+>>>>>>> finished jumping game
     width: 1169.4
     height: 276.19998
 >>>>>>> created jumping game
@@ -1361,14 +1503,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -365.59998
-    y: 366.6
-    width: 364.59998
-    height: 701.8
+    x: 2998
+    y: 73
+    width: 457
+    height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

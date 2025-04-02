@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -11,13 +12,18 @@ public class Game_Manager : MonoBehaviour
     public GameObject gameOverPanel;
     private PlatformGenerator platformGenerator;
     private CameraFollow cameraFollow;
-    private bool isGameActive = false;
+    private bool isGameActive = true;
+
+    public TextMeshProUGUI repaymentRatio;
+    public TextMeshProUGUI coinsCollectedText;
     
     private int score = 0;
     private int highScore = 0;
     
     void Awake()
     {
+        
+        
         Debug.Log("Game_Manager Awake called");
         if (gameOverPanel == null)
         {
@@ -41,6 +47,7 @@ public class Game_Manager : MonoBehaviour
 
     void Start()
     {
+        isGameActive = true;
         Debug.Log("Game_Manager Start called");
         
         // Find the PlatformGenerator in the scene
@@ -76,7 +83,9 @@ public class Game_Manager : MonoBehaviour
             Debug.Log("Game is not active, skipping update");
             return;
         }
-
+        
+        repaymentRatio.text = $"Repayment Ratio: {GameManager.repaymentAmount}";
+        coinsCollectedText.text = GameManager.collectedCoins.ToString();
         // Check if player is below camera view
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -95,6 +104,13 @@ public class Game_Manager : MonoBehaviour
         else
         {
             Debug.LogWarning("No player found with tag 'Player' in Update");
+        }
+        
+        //check how many coins were collected
+        if (GameManager.collectedCoins == 5f)
+        {
+            GameManager.repaymentAmount += 0.05f;
+            GameManager.collectedCoins = 0;
         }
     }
     
@@ -131,7 +147,8 @@ public class Game_Manager : MonoBehaviour
     
     public void GameOver()
     {
-        gameOverPanel.SetActive(true);
+        if(gameOverPanel != null)
+            gameOverPanel.SetActive(true);
         if (platformGenerator != null)
         {
             platformGenerator.CleanupPlatforms();
