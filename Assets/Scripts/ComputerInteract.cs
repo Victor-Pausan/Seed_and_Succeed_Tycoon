@@ -5,6 +5,8 @@ public class ComputerInteract : MonoBehaviour
     public GameObject dashboardCanvas;
 
     public GameObject room;
+
+    public GameObject jumpGame;
     //public GameObject upgradePanel;
 
     void Start()
@@ -16,6 +18,7 @@ public class ComputerInteract : MonoBehaviour
 
     void OnMouseDown()
     {
+        jumpGame.SetActive(false);
         dashboardCanvas.SetActive(!dashboardCanvas.activeSelf);
         room.SetActive(false);
         //upgradePanel.SetActive(false);

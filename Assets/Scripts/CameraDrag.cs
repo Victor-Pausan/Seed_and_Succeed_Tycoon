@@ -20,23 +20,32 @@ public class CameraDrag : MonoBehaviour
     private Vector2[] touchPositions; // For pinch-to-zoom
     private float initialPinchDistance;
     private float originalZoom;
+    private Camera mainCamera;
 
     void Start()
     {
-        // Ensure the camera is orthographic for 2D
-        Camera.main.orthographic = true;
+        mainCamera = Camera.main;
+        mainCamera.orthographic = true;
         touchPositions = new Vector2[2];
-        originalZoom = Camera.main.orthographicSize;
+        originalZoom = mainCamera.orthographicSize;
     }
 
     void Update()
     {
+        // Check if JumpGame is active
+        GameObject jumpGame = GameObject.FindGameObjectWithTag("JumpGame");
+        if (jumpGame != null && jumpGame.activeSelf)
+        {
+            // If JumpGame is active, disable this script's camera control
+            return;
+        }
+        
         if (room.activeSelf || garage.activeSelf)
         {
             // Handle dragging (mouse)
             if (Input.GetMouseButtonDown(0))
             {
-                touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                touchStart = mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 isDragging = true;
             }
             else if (Input.GetMouseButtonUp(0))
@@ -45,7 +54,7 @@ public class CameraDrag : MonoBehaviour
             }
             else if (Input.GetMouseButton(0) && isDragging)
             {
-                Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 direction = touchStart - mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 MoveCamera(direction);
             }
 
@@ -56,7 +65,7 @@ public class CameraDrag : MonoBehaviour
 
                 if (touch.phase == TouchPhase.Began)
                 {
-                    touchStart = Camera.main.ScreenToWorldPoint(touch.position);
+                    touchStart = mainCamera.ScreenToWorldPoint(touch.position);
                     isDragging = true;
                 }
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
@@ -65,7 +74,7 @@ public class CameraDrag : MonoBehaviour
                 }
                 else if (touch.phase == TouchPhase.Moved && isDragging)
                 {
-                    Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(touch.position);
+                    Vector3 direction = touchStart - mainCamera.ScreenToWorldPoint(touch.position);
                     MoveCamera(direction);
                 }
             }
@@ -74,7 +83,7 @@ public class CameraDrag : MonoBehaviour
             float scroll = Input.GetAxis("Mouse ScrollWheel");
             if (scroll != 0f)
             {
-                ZoomCamera(scroll * zoomSpeed); // Negative to match typical scroll direction
+                ZoomCamera(scroll * zoomSpeed);
             }
 
             // Handle pinch-to-zoom (mobile)
@@ -95,15 +104,16 @@ public class CameraDrag : MonoBehaviour
                     Vector2 currentTouch1 = touch1.position;
                     float currentDistance = Vector2.Distance(currentTouch0, currentTouch1);
                     float pinchDelta = currentDistance - initialPinchDistance;
-                    ZoomCamera(-pinchDelta * pinchZoomSpeed); // Negative to match pinch intuition
-                    initialPinchDistance = currentDistance; // Update for smooth zooming
+                    ZoomCamera(-pinchDelta * pinchZoomSpeed);
+                    initialPinchDistance = currentDistance;
                 }
             }
         }
         else
         {
+            // Reset camera position and zoom when not in room or garage
             transform.position = new Vector3(0, 0, -10);
-            Camera.main.orthographicSize = originalZoom;
+            mainCamera.orthographicSize = originalZoom;
         }
     }
 
@@ -124,7 +134,7 @@ public class CameraDrag : MonoBehaviour
     void ZoomCamera(float delta)
     {
         // Adjust orthographic size based on zoom input
-        float newSize = Camera.main.orthographicSize - delta;
-        Camera.main.orthographicSize = Mathf.Clamp(newSize, minZoom, maxZoom);
+        float newSize = mainCamera.orthographicSize - delta;
+        mainCamera.orthographicSize = Mathf.Clamp(newSize, minZoom, maxZoom);
     }
 }

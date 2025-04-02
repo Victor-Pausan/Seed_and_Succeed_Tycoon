@@ -3,15 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Object
+  - Platform_Green
+  - Platform
+  - SpecialObject
+  - Collectible
+  - Default
+  - GameOver
+  - GameCamera
+  - JumpGame
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Platform
   - Water
   - UI
-  - 
+  - OneWayPlatform
   - 
   - 
   - 

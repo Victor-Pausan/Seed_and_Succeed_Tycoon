@@ -1134,7 +1134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &144405076
 Transform:
   m_ObjectHideFlags: 0
@@ -1249,6 +1249,7 @@ GameObject:
   - component: {fileID: 146639649}
   - component: {fileID: 146639652}
   - component: {fileID: 146639653}
+  - component: {fileID: 146639654}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1378,6 +1379,21 @@ MonoBehaviour:
   pinchZoomSpeed: 0.02
   minZoom: 2
   maxZoom: 10
+--- !u!114 &146639654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146639648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2814dd7d55a49499f5f0ce941a4cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothSpeed: 0.125
+  verticalOffset: 1
+  showDebugLogs: 0
 --- !u!1 &151889865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,7 +3626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &470585350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4763,6 +4779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1e0b451a0fb604d8a0c82912c0c571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpGamePrefab: {fileID: 1688376516}
   room: {fileID: 699555802}
   computerScreen: {fileID: 497136797}
   futuresCanvas: {fileID: 180775016}
@@ -6294,7 +6311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &699555803
 Transform:
   m_ObjectHideFlags: 0
@@ -10500,6 +10517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashboardCanvas: {fileID: 497136797}
   room: {fileID: 699555802}
+  jumpGame: {fileID: 1688376516}
 --- !u!212 &1187558803
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11161,11 +11179,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246720929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f1e0b451a0fb604d8a0c82912c0c571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpGamePrefab: {fileID: 0}
   room: {fileID: 699555802}
   computerScreen: {fileID: 497136797}
   futuresCanvas: {fileID: 180775016}
@@ -11192,7 +11211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1247820758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12821,6 +12840,10 @@ PrefabInstance:
     - target: {fileID: 512937274165478075, guid: 70a161eb64321114286c19c847a73b09, type: 3}
       propertyPath: m_Name
       value: Garage
+      objectReference: {fileID: 0}
+    - target: {fileID: 512937274165478075, guid: 70a161eb64321114286c19c847a73b09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70a161eb64321114286c19c847a73b09, type: 3}
@@ -15225,6 +15248,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687772193}
   m_CullTransparentMesh: 1
+--- !u!1 &1688376516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3926692072756008343, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+  m_PrefabInstance: {fileID: 3926692073349333331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1712695721
 GameObject:
   m_ObjectHideFlags: 0
@@ -17957,3 +17985,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &3926692073349333331
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2160719973849826908, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 146639650}
+    - target: {fileID: 3015068647687242437, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 583880597}
+    - target: {fileID: 3015068647687242437, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenJumpGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015068647687242437, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480844716806980942, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 583880597}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 520.8455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 246.87186
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.7234373
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008342, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926692072756008343, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_Name
+      value: JumpGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563849545539072278, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 146639650}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9542c91c5d38c4847a971914f97c2820, type: 3}

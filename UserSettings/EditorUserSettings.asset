@@ -17,7 +17,23 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-3:
       value: 05540c5506050f5a08080f7349220b44154f1e727d702265752c4d30bbb5653e
       flags: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
     RecentlyUsedSceneGuid-4:
+=======
+    RecentlyUsedSceneGuid-5:
+      value: 0753070506565d0e5f56552112745d4413164d2c2a2e7e622b7c4c63b3b4616c
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 5204060306025e5d0f5d5870147b0e4410164d797b7d7164752d4835b1e23139
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 00035754530c5b0f5e5c0e7b45255e44454e4c7f792e7e362b7e1937e1b1603b
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 5608015f5c030b0f5c5d5b76447b0844124f41737e2c70612e701c63b1b7366a
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+>>>>>>> created jumping game
       value: 0001020556560b0f0f0b557443200d44461641737f7c76622c714d37e1e5373e
       flags: 0
     vcSharedLogLevel:
