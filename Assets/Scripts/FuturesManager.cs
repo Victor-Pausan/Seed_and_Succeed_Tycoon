@@ -20,7 +20,7 @@ public class FuturesManager : MonoBehaviour
     void Start()
     {
         // Use GameManager's suprBalance instead of direct initialization
-        currentBalance = GameManager.Instance.suprBalance;
+        currentBalance = GameManager.suprBalance;
         
         UpdateBalanceText();
         
@@ -32,7 +32,7 @@ public class FuturesManager : MonoBehaviour
     {
         balanceText.text = $"SUPR Balance: {currentBalance:F2}";
         // Sync the balance back to GameManager
-        GameManager.Instance.suprBalance = currentBalance;
+        GameManager.suprBalance = currentBalance;
     }
 
     void PlaceBet(bool isLong)
@@ -91,9 +91,9 @@ public class FuturesManager : MonoBehaviour
     {
         // Optional: Continuously sync balance with GameManager
         // This ensures balance stays in sync even if changed elsewhere
-        if (Mathf.Abs(currentBalance - GameManager.Instance.suprBalance) > 0.01f)
+        if (Mathf.Abs(currentBalance - GameManager.suprBalance) > 0.01f)
         {
-            currentBalance = GameManager.Instance.suprBalance;
+            currentBalance = GameManager.suprBalance;
             UpdateBalanceText();
         }
     }

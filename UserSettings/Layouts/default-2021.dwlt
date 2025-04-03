@@ -14,12 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
     x: 0
+=======
+    x: 1536
+>>>>>>> created room extension
     y: 43
     width: 1920
     height: 989
   m_ShowMode: 4
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
   m_Title: Game
+=======
+  m_Title: Project
+>>>>>>> created room extension
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +127,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
   controlID: 73
+=======
+  controlID: 44
+>>>>>>> created room extension
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,11 +151,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
     width: 1462
+=======
+    width: 1461
+>>>>>>> created room extension
     height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -165,6 +182,13 @@ MonoBehaviour:
 =======
   controlID: 111
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+  controlID: 111
+=======
+  controlID: 16
+>>>>>>> created room extension
+>>>>>>> created room extension
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,6 +208,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -218,6 +243,9 @@ MonoBehaviour:
   controlID: 19
 >>>>>>> created jumping game
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     width: 1462
     height: 553
   m_MinSize: {x: 200, y: 100}
@@ -228,7 +256,18 @@ MonoBehaviour:
 >>>>>>> finished jumping game
 =======
   controlID: 112
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> cars shop update
+=======
+=======
+    width: 1461
+    height: 552
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 17
+>>>>>>> created room extension
+>>>>>>> created room extension
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,6 +285,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -278,13 +318,26 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> finished jumping game
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     width: 355
     height: 553
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
 >>>>>>> cars shop update
   m_ActualView: {fileID: 14}
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> created jumping game
+=======
+=======
+    width: 354
+    height: 552
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 13}
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_Panes:
   - {fileID: 14}
   m_Selected: 0
@@ -304,6 +357,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
     x: 355
     y: 0
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -340,6 +394,18 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 15}
   - {fileID: 13}
+=======
+    x: 354
+    y: 0
+    width: 1107
+    height: 552
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 12}
+>>>>>>> created room extension
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &10
@@ -358,6 +424,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -385,9 +452,17 @@ MonoBehaviour:
   m_ActualView: {fileID: 17}
 >>>>>>> created jumping game
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     y: 553
     width: 1462
     height: 386
+=======
+    y: 552
+    width: 1461
+    height: 387
+>>>>>>> created room extension
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -412,6 +487,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
     x: 1462
     y: 0
     width: 458
@@ -419,6 +495,15 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
+=======
+    x: 1461
+    y: 0
+    width: 459
+    height: 939
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+>>>>>>> created room extension
   m_Panes:
   - {fileID: 18}
   - {fileID: 12}
@@ -477,6 +562,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     x: 290.4
     y: 73.6
     width: 880.4
@@ -502,12 +588,24 @@ MonoBehaviour:
 =======
     x: 1893
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     x: 355
 >>>>>>> cars shop update
     y: 73
     width: 1105
     height: 532
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> finished jumping game
+=======
+=======
+    x: 1890
+    y: 73
+    width: 1105
+    height: 531
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -518,6 +616,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -535,6 +634,13 @@ MonoBehaviour:
 =======
   m_TargetSize: {x: 908, y: 511}
 >>>>>>> finished jumping game
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+  m_TargetSize: {x: 908, y: 511}
+=======
+  m_TargetSize: {x: 907, y: 510}
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -549,6 +655,7 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -576,11 +683,23 @@ MonoBehaviour:
     m_VBaseRangeMax: 153.44
 >>>>>>> created jumping game
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     m_HBaseRangeMin: -454
     m_HBaseRangeMax: 454
     m_VBaseRangeMin: -255.5
     m_VBaseRangeMax: 255.5
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> finished jumping game
+=======
+=======
+    m_HBaseRangeMin: -453.5
+    m_HBaseRangeMax: 453.5
+    m_VBaseRangeMin: -255
+    m_VBaseRangeMax: 255
+>>>>>>> created room extension
+>>>>>>> created room extension
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -633,10 +752,19 @@ MonoBehaviour:
 >>>>>>> finished jumping game
 =======
       width: 1105
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
       height: 511
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 552.5, y: 255.5}
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> cars shop update
+=======
+=======
+      height: 510
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 552.5, y: 255}
+>>>>>>> created room extension
+>>>>>>> created room extension
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -686,7 +814,11 @@ MonoBehaviour:
       x: -551.5
 =======
       x: -552.5
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
       y: -255.5
       width: 1105
       height: 511
@@ -697,7 +829,18 @@ MonoBehaviour:
 >>>>>>> finished jumping game
 =======
   m_LastWindowPixelSize: {x: 1105, y: 532}
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> cars shop update
+=======
+=======
+      y: -255
+      width: 1105
+      height: 510
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1105, y: 531}
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -728,6 +871,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     x: 0
     y: 73.6
     width: 289.4
@@ -753,18 +897,31 @@ MonoBehaviour:
 =======
     x: 1536
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     x: 0
 >>>>>>> cars shop update
     y: 73
     width: 354
     height: 532
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> finished jumping game
+=======
+=======
+    x: 1536
+    y: 73
+    width: 353
+    height: 531
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -797,6 +954,9 @@ MonoBehaviour:
       m_ExpandedIDs: 103afdffee3bfdff783dfdff5e3ffdff3a41fdff32ceffff6af5ffff04faffff08faffff40faffff18fbffff606c0000b86c00001e7000002670000072700000
 >>>>>>> finished jumping game
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
       scrollPos: {x: 0, y: 180}
       m_SelectedIDs: 846d0000
       m_LastClickedID: 28036
@@ -806,13 +966,27 @@ MonoBehaviour:
         m_UserAcceptedRename: 0
         m_Name: 
         m_OriginalName: 
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: fe3dfeffa842feffae42fefffa58ffff2a59ffff20fbffff7c6c0000266f0000326f000006700000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: Computer2
+        m_OriginalName: Computer2
+>>>>>>> created room extension
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
         m_UserData: 0
+=======
+        m_UserData: -114002
+>>>>>>> created room extension
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 11
@@ -850,6 +1024,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     x: 290.4
     y: 73.6
     width: 880.4
@@ -875,12 +1050,24 @@ MonoBehaviour:
 =======
     x: 1893
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     x: 355
 >>>>>>> cars shop update
     y: 73
     width: 1105
     height: 532
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> finished jumping game
+=======
+=======
+    x: 1890
+    y: 73
+    width: 1105
+    height: 531
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1124,6 +1311,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_Target: {x: 0, y: 0, z: -10}
     speed: 2
     m_Value: {x: 0, y: 0, z: -10}
@@ -1152,6 +1340,17 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 8.322439, y: 2.9581506, z: 5.53212}
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+    m_Target: {x: 8.322439, y: 2.9581506, z: 5.53212}
+    speed: 2
+    m_Value: {x: 8.322439, y: 2.9581506, z: 5.53212}
+=======
+    m_Target: {x: 1.6469173, y: 1.8455317, z: -0.05914607}
+    speed: 2
+    m_Value: {x: 1.6469173, y: 1.8455317, z: -0.05914607}
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1207,6 +1406,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_Target: 12.124355
     speed: 2
     m_Value: 12.124355
@@ -1235,6 +1435,17 @@ MonoBehaviour:
     speed: 2
     m_Value: 5.2747636
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+    m_Target: 5.2747636
+    speed: 2
+    m_Value: 5.2747636
+=======
+    m_Target: 9.536132
+    speed: 2
+    m_Value: 9.536132
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1284,6 +1495,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     x: 0
     y: 501.6
 =======
@@ -1293,6 +1505,9 @@ MonoBehaviour:
     width: 1171.8
     height: 273.8
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     x: 0
     y: 627
     width: 1465
@@ -1312,7 +1527,16 @@ MonoBehaviour:
     y: 626
     width: 1461
     height: 365
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> finished jumping game
+=======
+=======
+    x: 1536
+    y: 625
+    width: 1460
+    height: 366
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1334,6 +1558,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     - Assets/Scripts
 =======
     - Assets/Free 2D Demo Character sprite sheet
@@ -1347,11 +1572,19 @@ MonoBehaviour:
 =======
     - Assets/Prefabs
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+    - Assets/Prefabs
+=======
+    - Assets
+>>>>>>> created room extension
+>>>>>>> created room extension
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -1377,11 +1610,19 @@ MonoBehaviour:
 =======
   - Assets/Prefabs
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+  - Assets/Prefabs
+=======
+  - Assets/Realistic City Buildings DEMO
+>>>>>>> created room extension
+>>>>>>> created room extension
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\pausa\Unity\Superseed_tycoon_game\SuperSeed_Tycoon_Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
@@ -1410,11 +1651,23 @@ MonoBehaviour:
     m_ExpandedIDs: 000000009276000094760000be760000c8760000707e00000886000000ca9a3b
 >>>>>>> finished jumping game
 =======
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+>>>>>>> created room extension
     scrollPos: {x: 0, y: 43}
     m_SelectedIDs: c8760000
     m_LastClickedID: 30408
     m_ExpandedIDs: 00000000b8760000ba76000000ca9a3b
+<<<<<<< aba88094fa5ef074156755298690050001224834
 >>>>>>> cars shop update
+=======
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: dc770000
+    m_LastClickedID: 30684
+    m_ExpandedIDs: 00000000dc770000de7700000678000054b5000000ca9a3b
+>>>>>>> created room extension
+>>>>>>> created room extension
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1447,6 +1700,7 @@ MonoBehaviour:
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
 <<<<<<< aba88094fa5ef074156755298690050001224834
+<<<<<<< aba88094fa5ef074156755298690050001224834
     m_ExpandedIDs: 0000000060710000
 =======
     m_ExpandedIDs: 000000001c720000
@@ -1463,6 +1717,13 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000b8760000ba760000
 >>>>>>> cars shop update
+=======
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
+    m_ExpandedIDs: 00000000b8760000ba760000
+=======
+    m_ExpandedIDs: 00000000dc770000de770000
+>>>>>>> created room extension
+>>>>>>> created room extension
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1607,9 +1868,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< 462f7a3d8f1197647dc60e60e771ec0eb2dccdc2
     x: 1462
     y: 73
     width: 457
+=======
+    x: 2997
+    y: 73
+    width: 458
+>>>>>>> created room extension
     height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

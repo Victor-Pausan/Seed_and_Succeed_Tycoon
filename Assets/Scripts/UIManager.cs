@@ -4,7 +4,7 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] // Add SerializeField attribute to ensure Unity serializes this field
+    [SerializeField]
     public GameObject jumpGamePrefab;
     private GameObject activeJumpGame;
 
@@ -18,13 +18,12 @@ public class UIManager : MonoBehaviour
     public Button takeLoanButton;
     public Button runAdButton;
     public Button hireEmployeeButton;
-    
-    //public GameObject upgradePanel;
-    public TMP_InputField loanAmountInput; // Assign in Inspector
+    public Button maxLoanButton; // New button reference
+
+    public TMP_InputField loanAmountInput; // Already assigned in Inspector
 
     void Awake()
     {
-        // Add validation in Awake
         if (jumpGamePrefab == null)
         {
             Debug.LogError("jumpGamePrefab is not assigned in the inspector! Please assign it.");
@@ -37,9 +36,9 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        // Add another check in Start
         Debug.Log("Start - jumpGamePrefab status: " + (jumpGamePrefab != null ? jumpGamePrefab.name : "null"));
 
+        // Existing button listeners
         takeLoanButton.onClick.AddListener(() =>
         {
             if (float.TryParse(loanAmountInput.text, out float amount))
@@ -50,9 +49,7 @@ public class UIManager : MonoBehaviour
 
         runAdButton.onClick.AddListener(() =>
         {
-            // Add debug log
             Debug.Log("Run Ad button clicked. jumpGamePrefab status: " + (jumpGamePrefab != null ? jumpGamePrefab.name : "null"));
-            
             if (activeJumpGame != null)
             {
                 DestroyJumpGame();
@@ -63,10 +60,24 @@ public class UIManager : MonoBehaviour
         hireEmployeeButton.onClick.AddListener(() =>
         {
             GameManager.Instance.HireEmployee();
-            // upgradePanel.SetActive(false);
         });
+
+        // New Max Loan button listener
+        if (maxLoanButton != null)
+        {
+            maxLoanButton.onClick.AddListener(() =>
+            {
+                loanAmountInput.text = GameManager.Instance.maxAmountToLoan.ToString("F2");
+                Debug.Log($"Max loan amount set in input field: {GameManager.Instance.maxAmountToLoan:F2}");
+            });
+        }
+        else
+        {
+            Debug.LogError("maxLoanButton is not assigned in the Inspector!");
+        }
     }
 
+    // Existing methods (OpenShop, OpenComputer, etc.) remain unchanged
     public void OpenShop()
     {
         DestroyJumpGame();
@@ -91,7 +102,6 @@ public class UIManager : MonoBehaviour
 
     public void OpenJumpGame()
     {
-        // Add validation and debug logs
         if (jumpGamePrefab == null)
         {
             Debug.LogError("Cannot open jump game - jumpGamePrefab is null!");
@@ -105,7 +115,8 @@ public class UIManager : MonoBehaviour
             activeJumpGame = Instantiate(jumpGamePrefab);
             Debug.Log("Jump game instantiated successfully: " + (activeJumpGame != null));
             activeJumpGame.SetActive(true);
-        } else if (activeJumpGame != null)
+        }
+        else
         {
             DestroyJumpGame();
             activeJumpGame = Instantiate(jumpGamePrefab);

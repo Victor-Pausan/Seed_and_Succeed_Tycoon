@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public float suprBalance = 100f;
+    public static float suprBalance = 100f;
     public float loanBalance = 0f;
     public float loanCollateralRatio = 5f;
     public float adEffectiveness = 1f;
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         if (suprText != null) suprText.text = $"SUPR balance: {suprBalance:F2} (loan up to {maxAmountToLoan})";
         if (loanText != null) loanText.text = $"Loaned: {loanBalance:F2} SUPR";
         if (collatertalText != null) collatertalText.text = $"Collateral SUPR: {collateralBalance:F2}";
-        if (runAdText != null) runAdText.text = $"Run ad campaign: {adCost:F2} SUPR";
+        if (runAdText != null) runAdText.text = $"SUPR GAME";
         if (employeesText != null) employeesText.text = $"Hire employee: {baseHireCost} SUPR";
         if (maxAmountLoan != null) maxAmountLoan.text = $"Max amount to loan: {maxAmountToLoan}";
         if (repaymentRatio != null) repaymentRatio.text = $"Repayment ratio: {repaymentAmount} supr/s";
