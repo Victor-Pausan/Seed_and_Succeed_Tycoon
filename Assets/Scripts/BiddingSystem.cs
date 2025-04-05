@@ -18,58 +18,21 @@ public class BiddingSystem : MonoBehaviour
     public Button placeBidButton; // Reference to the place bid button
     public TextMeshProUGUI resultText; // Reference to the TextMeshPro text
 
-    public void PlaceBid()
-    {
-        Debug.Log("PlaceBid called with input: " + bidInputField.text);
-        
-        if (int.TryParse(bidInputField.text, out int bidAmount) && bidAmount > 0)
-        {
-            bool isHighestBid = Random.value > 0.5f; // 50% chance of winning
-            Debug.Log("Bid result: " + (isHighestBid ? "Won" : "Lost"));
-            
-            if (isHighestBid)
-            {
-                resultText.text = "Congratulations! Your bid was the highest! Thank you for contributing to the Proof-of-Repayment system!. You will now be rewarded with SuperSeeds.";
-                if (targetSprite == null)
-                {
-                    // Try to get the component from this GameObject if not assigned
-                    targetSprite = GetComponent<SpriteRenderer>();
-            
-                    // If still null, log an error
-                    if (targetSprite == null)
-                    {
-                        Debug.LogError("No sprite renderer assigned to BiddingSystem script!");
-                        return;
-                    }
-                }
-        
-                // Set sprite to initial position
-                targetSprite.transform.position = initialPosition;
-                Debug.Log("Starting movement from position: " + initialPosition);
-                StartMovement();
-            }
-            else
-            {
-                resultText.text = "You lost! Your bid amount has been returned. Try again later!";
-            }
-        }
-        else
-        {
-            resultText.text = "Please enter a valid bid amount!";
-        }
-    }
-
     void Start()
     {
         resultText.text = $"Welcome to the Proof-of-Repayment game! Take the chance to help the repay of loans by bidding against other players. If your bid is the highest, you will be rewarded with SuperSeeds.";
         
+        // Check if button reference is assigned
+        if (placeBidButton == null)
+        {
+            Debug.LogError("PlaceBidButton is not assigned in the Inspector!");
+            return;
+        }
+
         // Check if sprite reference is assigned
         if (targetSprite == null)
         {
-            // Try to get the component from this GameObject if not assigned
             targetSprite = GetComponent<SpriteRenderer>();
-            
-            // If still null, log an error
             if (targetSprite == null)
             {
                 Debug.LogError("No sprite renderer assigned to BiddingSystem script!");
@@ -85,6 +48,61 @@ public class BiddingSystem : MonoBehaviour
         
         // Make sure the sprite is visible
         targetSprite.enabled = true;
+    }
+
+    public void PlaceBid()
+    {
+        Debug.Log("PlaceBid called with input: " + bidInputField.text);
+        
+        if (int.TryParse(bidInputField.text, out int bidAmount) && bidAmount > 0)
+        {
+            bool isHighestBid = Random.value > 0.5f; // 50% chance of winning
+            Debug.Log("Bid result: " + (isHighestBid ? "Won" : "Lost"));
+            
+            if (isHighestBid)
+            {
+                // Calculate random reward (10% to 15% of current balance)
+                float rewardPercentage = Random.Range(0.10f, 0.15f); // 10% to 15%
+                float rewardAmount = GameManager.suprBalance * rewardPercentage;
+                GameManager.suprBalance += rewardAmount; // Increase balance
+
+                // Update result text with the reward amount
+                resultText.text = $"Congratulations! Your bid was the highest! Thank you for contributing to the Proof-of-Repayment system! You have been rewarded with {rewardAmount:F2} SuperSeeds. New balance: {GameManager.suprBalance:F2}";
+
+                if (targetSprite != null)
+                {
+                    // Set sprite to initial position
+                    targetSprite.transform.position = initialPosition;
+                    Debug.Log("Starting movement from position: " + initialPosition);
+                    StartMovement();
+                }
+            }
+            else
+            {
+                resultText.text = "You lost! Your bid amount has been returned. Try again later!";
+            }
+
+            // Disable the button and change its text
+            DisableBidButton();
+        }
+        else
+        {
+            resultText.text = "Please enter a valid bid amount!";
+        }
+    }
+
+    private void DisableBidButton()
+    {
+        placeBidButton.interactable = false; // Disable the button
+        TextMeshProUGUI buttonText = placeBidButton.GetComponentInChildren<TextMeshProUGUI>();
+        if (buttonText != null)
+        {
+            buttonText.text = "Try Again Tomorrow"; // Change button text
+        }
+        else
+        {
+            Debug.LogWarning("No TextMeshProUGUI component found on the button!");
+        }
     }
 
     void Update()
@@ -105,9 +123,6 @@ public class BiddingSystem : MonoBehaviour
             );
             
             targetSprite.transform.position = newPosition;
-            
-            // Uncomment to see movement in console
-            // Debug.Log("Moving sprite to: " + newPosition + " (x: " + currentX + ")");
             
             // Stop when we reach the maximum x value
             if (currentX >= maxX)
