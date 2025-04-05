@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public static float suprBalance = 100f;
+    public static float suprBalance = 1000000f;
     public float loanBalance = 0f;
     public float loanCollateralRatio = 5f;
     public float adEffectiveness = 1f;

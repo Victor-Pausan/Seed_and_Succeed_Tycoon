@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
     public GameObject carsShopCanvas;
     public GameObject bidGameCanvas;
     public GameObject garage;
+    public GameObject shop;
+    public GameObject menuPanel;
 
     public Button takeLoanButton;
     public Button runAdButton;
@@ -80,6 +82,9 @@ public class UIManager : MonoBehaviour
     // Existing methods (OpenShop, OpenComputer, etc.) remain unchanged
     public void OpenShop()
     {
+        menuPanel.SetActive(false);
+        
+        shop.SetActive(false);
         DestroyJumpGame();
         garage.SetActive(false);
         bidGameCanvas.SetActive(false);
@@ -88,9 +93,24 @@ public class UIManager : MonoBehaviour
         futuresCanvas.SetActive(false);
         carsShopCanvas.SetActive(true);
     }
+    
+    public void OpenAssetsShop()
+    {
+        menuPanel.SetActive(false);
+        
+        shop.SetActive(true);
+        DestroyJumpGame();
+        garage.SetActive(false);
+        bidGameCanvas.SetActive(false);
+        room.SetActive(false);
+        computerScreen.SetActive(false);
+        futuresCanvas.SetActive(false);
+        carsShopCanvas.SetActive(false);
+    }
 
     public void OpenComputer()
     {
+        shop.SetActive(false);
         DestroyJumpGame();
         garage.SetActive(false);
         bidGameCanvas.SetActive(false);
@@ -130,6 +150,7 @@ public class UIManager : MonoBehaviour
         computerScreen.SetActive(false);
         futuresCanvas.SetActive(false);
         carsShopCanvas.SetActive(false);
+        shop.SetActive(false);
     }
 
     private void DestroyJumpGame()
@@ -144,6 +165,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenFutures()
     {
+        shop.SetActive(false);
         DestroyJumpGame();
         garage.SetActive(false);
         bidGameCanvas.SetActive(false);
@@ -155,6 +177,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenBidGame()
     {
+        shop.SetActive(false);
         DestroyJumpGame();
         garage.SetActive(false);
         bidGameCanvas.SetActive(true);
@@ -166,6 +189,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenGarage()
     {
+        shop.SetActive(false);
         DestroyJumpGame();
         garage.SetActive(true);
         bidGameCanvas.SetActive(false);
@@ -177,6 +201,7 @@ public class UIManager : MonoBehaviour
     
     public void ReturnToRoom()
     {
+        shop.SetActive(false);
         DestroyJumpGame();
         garage.SetActive(false);
         bidGameCanvas.SetActive(false);

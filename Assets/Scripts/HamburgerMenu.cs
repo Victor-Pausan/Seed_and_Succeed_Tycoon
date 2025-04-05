@@ -16,7 +16,7 @@ public class HamburgerMenu : MonoBehaviour
     public void Disable()
     {
         menuPanel.SetActive(false);
-    }
+    }//asd
 
     public void ToggleMenu()
     {

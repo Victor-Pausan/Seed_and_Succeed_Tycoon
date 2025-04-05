@@ -13,7 +13,6 @@ TagManager:
   - GameOver
   - GameCamera
   - JumpGame
-  - LockUnderMenu
   layers:
   - Default
   - TransparentFX
