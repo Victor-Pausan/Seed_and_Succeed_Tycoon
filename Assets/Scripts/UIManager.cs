@@ -129,7 +129,7 @@ public class UIManager : MonoBehaviour
         }
 
         Debug.Log("Attempting to instantiate jumpGamePrefab: " + jumpGamePrefab.name);
-        
+    
         if (activeJumpGame == null)
         {
             activeJumpGame = Instantiate(jumpGamePrefab);
@@ -142,6 +142,21 @@ public class UIManager : MonoBehaviour
             activeJumpGame = Instantiate(jumpGamePrefab);
             Debug.Log("Jump game instantiated successfully: " + (activeJumpGame != null));
             activeJumpGame.SetActive(true);
+        }
+    
+        // Make sure the new game object has the JumpGame tag
+        activeJumpGame.tag = "JumpGame";
+    
+        // Find and restart the camera follow
+        CameraFollow cameraFollow = FindObjectOfType<CameraFollow>();
+        if (cameraFollow != null)
+        {
+            cameraFollow.StopFollowing();  // Reset first
+            cameraFollow.StartFollowing(); // Start following again
+        }
+        else
+        {
+            Debug.LogError("CameraFollow component not found!");
         }
         
         garage.SetActive(false);
@@ -157,6 +172,7 @@ public class UIManager : MonoBehaviour
     {
         if (activeJumpGame != null)
         {
+            GameManager.collectedCoins = 0;
             Debug.Log("Destroying active jump game instance");
             Destroy(activeJumpGame);
             activeJumpGame = null;

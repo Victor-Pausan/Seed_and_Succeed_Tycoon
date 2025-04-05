@@ -13,6 +13,7 @@ public class Game_Manager : MonoBehaviour
     private PlatformGenerator platformGenerator;
     private CameraFollow cameraFollow;
     private bool isGameActive = true;
+    private bool isGameOver = false;
 
     public TextMeshProUGUI repaymentRatio;
     public TextMeshProUGUI coinsCollectedText;
@@ -22,8 +23,6 @@ public class Game_Manager : MonoBehaviour
     
     void Awake()
     {
-        
-        
         Debug.Log("Game_Manager Awake called");
         if (gameOverPanel == null)
         {
@@ -38,6 +37,11 @@ public class Game_Manager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+        
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
         }
         
         // Load high score
@@ -83,9 +87,17 @@ public class Game_Manager : MonoBehaviour
             Debug.Log("Game is not active, skipping update");
             return;
         }
+
+        if (!isGameOver)
+        {
+            if (gameOverPanel != null)
+            {
+                gameOverPanel.SetActive(false);
+            }
+        }
         
         repaymentRatio.text = $"Repayment Ratio: {GameManager.repaymentAmount} supr/s";
-        coinsCollectedText.text = GameManager.collectedCoins.ToString();
+        coinsCollectedText.text = GameManager.collectedCoins.ToString() + "/5";
         // Check if player is below camera view
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -93,7 +105,7 @@ public class Game_Manager : MonoBehaviour
             float cameraBottom = Camera.main.transform.position.y - Camera.main.orthographicSize;
             float playerY = player.transform.position.y;
             
-            Debug.Log($"Player Y: {playerY}, Camera Bottom: {cameraBottom}");
+            //Debug.Log($"Player Y: {playerY}, Camera Bottom: {cameraBottom}");
             
             if (playerY < cameraBottom)
             {
@@ -147,8 +159,14 @@ public class Game_Manager : MonoBehaviour
     
     public void GameOver()
     {
-        if(gameOverPanel != null)
+        isGameOver = true;
+
+        if (gameOverPanel != null)
+        {
             gameOverPanel.SetActive(true);
+            Debug.Log("game is over");
+        } 
+            
         if (platformGenerator != null)
         {
             platformGenerator.CleanupPlatforms();
@@ -159,23 +177,23 @@ public class Game_Manager : MonoBehaviour
     {
         Debug.Log("Restarting game");
         isGameActive = true;
-        
+    
         // Clean up any existing platforms first
         if (platformGenerator != null)
         {
             platformGenerator.CleanupPlatforms();
         }
-        
+    
         // Reset score
         score = 0;
         UpdateScoreUI();
-        
+    
         // Hide game over panel
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(false);
         }
-        
+    
         // Reset player position
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -192,18 +210,19 @@ public class Game_Manager : MonoBehaviour
         {
             Debug.LogError("No player found with tag 'Player' during restart!");
         }
-        
-        // Start camera following
+    
+        // Make sure to STOP following first to reset camera position
         if (cameraFollow != null)
         {
+            cameraFollow.StopFollowing();
             cameraFollow.StartFollowing();
-            Debug.Log("Camera following started");
+            Debug.Log("Camera following restarted");
         }
         else
         {
             Debug.LogError("CameraFollow component is null!");
         }
-        
+    
         // Let PlatformGenerator create new platforms
         if (platformGenerator != null)
         {

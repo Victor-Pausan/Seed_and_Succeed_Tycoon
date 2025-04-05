@@ -5,7 +5,7 @@ public class CameraFollow : MonoBehaviour
 {
     [Header("Follow Settings")]
     public float smoothSpeed = 0.125f;
-    public float verticalOffset = 1f;
+    public float verticalOffset = 2f;
     
     [Header("Debug")]
     public bool showDebugLogs = true; // Set to true by default for debugging
@@ -87,9 +87,19 @@ public class CameraFollow : MonoBehaviour
     public void StartFollowing()
     {
         Debug.Log("StartFollowing called");
-        FindJumpGame(); // Check if JumpGame exists before starting
+    
+        // Reset camera to initial position first
+        ResetCamera();
+    
+        // Find JumpGame - try harder to find it
+        FindJumpGame(); 
+    
         if (jumpGame != null)
         {
+            // Force find player again
+            target = null;
+            FindPlayer();
+        
             isFollowing = true;
             highestYPos = 0f; // Reset highest Y position when starting to follow
             Debug.Log("Camera following started - JumpGame is active");
