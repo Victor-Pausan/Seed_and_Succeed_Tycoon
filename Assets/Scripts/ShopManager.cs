@@ -24,9 +24,6 @@ public class ShopManager : MonoBehaviour
     public Button poolTableButton;
     public Button suprPlantButton;
 
-    // Player balance from GameManager
-    private float balance;
-
     // Flags to track if items have been bought
     private bool isNFTPosterBought = false;
     private bool isRoomExtended = false;
@@ -47,9 +44,6 @@ public class ShopManager : MonoBehaviour
 
     void Start()
     {
-        // Initialize balance from GameManager
-        balance = GameManager.suprBalance;
-
         // Set all objects inactive at start
         if (nftPoster != null) nftPoster.SetActive(false);
         if (extendedRoom != null) extendedRoom.SetActive(false);
@@ -60,17 +54,15 @@ public class ShopManager : MonoBehaviour
         if (suprPlant != null) suprPlant.SetActive(false);
     }
 
-    // Buy NFT Poster (first item, no prerequisite)
     public void BuyNFTPoster()
     {
-        if (!isNFTPosterBought && nftPoster != null && balance >= nftPosterPrice)
+        if (!isNFTPosterBought && nftPoster != null && GameManager.suprBalance >= nftPosterPrice)
         {
             nftPoster.SetActive(true);
             isNFTPosterBought = true;
-            balance -= nftPosterPrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= nftPosterPrice;
             UpdateButton(nftPosterButton);
-            Debug.Log("NFT Poster purchased for " + nftPosterPrice + "! New balance: " + balance);
+            Debug.Log("NFT Poster purchased for " + nftPosterPrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isNFTPosterBought)
         {
@@ -78,29 +70,21 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + nftPosterPrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + nftPosterPrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Buy Room Extension (requires NFT Poster)
     public void BuyRoomExtension()
     {
-        if (!isRoomExtended && extendedRoom != null && balance >= roomExtensionPrice && isNFTPosterBought)
+        if (!isRoomExtended && extendedRoom != null && GameManager.suprBalance >= roomExtensionPrice && isNFTPosterBought)
         {
             extendedRoom.SetActive(true);
-            if (bed != null)
-            {
-                bed.SetActive(false);
-            }
-            if (oldRug != null)
-            {
-                oldRug.SetActive(false);
-            }
+            if (bed != null) bed.SetActive(false);
+            if (oldRug != null) oldRug.SetActive(false);
             isRoomExtended = true;
-            balance -= roomExtensionPrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= roomExtensionPrice;
             UpdateButton(roomExtensionButton);
-            Debug.Log("Room Extension purchased for " + roomExtensionPrice + "! New balance: " + balance);
+            Debug.Log("Room Extension purchased for " + roomExtensionPrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isRoomExtended)
         {
@@ -112,21 +96,19 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + roomExtensionPrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + roomExtensionPrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Buy Supr Rug (requires Room Extension)
     public void BuySuprRug()
     {
-        if (!isSuprRugBought && suprRug != null && balance >= suprRugPrice && isRoomExtended)
+        if (!isSuprRugBought && suprRug != null && GameManager.suprBalance >= suprRugPrice && isRoomExtended)
         {
             suprRug.SetActive(true);
             isSuprRugBought = true;
-            balance -= suprRugPrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= suprRugPrice;
             UpdateButton(suprRugButton);
-            Debug.Log("Supr Rug purchased for " + suprRugPrice + "! New balance: " + balance);
+            Debug.Log("Supr Rug purchased for " + suprRugPrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isSuprRugBought)
         {
@@ -138,21 +120,19 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + suprRugPrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + suprRugPrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Buy Genesis Passport (requires Supr Rug)
     public void BuyGenesisPassport()
     {
-        if (!isGenesisPassportBought && genesisPassport != null && balance >= genesisPassportPrice && isSuprRugBought)
+        if (!isGenesisPassportBought && genesisPassport != null && GameManager.suprBalance >= genesisPassportPrice && isSuprRugBought)
         {
             genesisPassport.SetActive(true);
             isGenesisPassportBought = true;
-            balance -= genesisPassportPrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= genesisPassportPrice;
             UpdateButton(genesisPassportButton);
-            Debug.Log("Genesis Passport purchased for " + genesisPassportPrice + "! New balance: " + balance);
+            Debug.Log("Genesis Passport purchased for " + genesisPassportPrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isGenesisPassportBought)
         {
@@ -164,21 +144,19 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + genesisPassportPrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + genesisPassportPrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Buy Supr Table and Chair (requires Genesis Passport)
     public void BuySuprTableAndChair()
     {
-        if (!isSuprTableAndChairBought && suprTableAndChair != null && balance >= suprTableAndChairPrice && isGenesisPassportBought)
+        if (!isSuprTableAndChairBought && suprTableAndChair != null && GameManager.suprBalance >= suprTableAndChairPrice && isGenesisPassportBought)
         {
             suprTableAndChair.SetActive(true);
             isSuprTableAndChairBought = true;
-            balance -= suprTableAndChairPrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= suprTableAndChairPrice;
             UpdateButton(suprTableAndChairButton);
-            Debug.Log("Supr Table and Chair purchased for " + suprTableAndChairPrice + "! New balance: " + balance);
+            Debug.Log("Supr Table and Chair purchased for " + suprTableAndChairPrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isSuprTableAndChairBought)
         {
@@ -190,21 +168,19 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + suprTableAndChairPrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + suprTableAndChairPrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Buy Pool Table (requires Supr Table and Chair)
     public void BuyPoolTable()
     {
-        if (!isPoolTableBought && poolTable != null && balance >= poolTablePrice && isSuprTableAndChairBought)
+        if (!isPoolTableBought && poolTable != null && GameManager.suprBalance >= poolTablePrice && isSuprTableAndChairBought)
         {
             poolTable.SetActive(true);
             isPoolTableBought = true;
-            balance -= poolTablePrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= poolTablePrice;
             UpdateButton(poolTableButton);
-            Debug.Log("Pool Table purchased for " + poolTablePrice + "! New balance: " + balance);
+            Debug.Log("Pool Table purchased for " + poolTablePrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isPoolTableBought)
         {
@@ -216,21 +192,19 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + poolTablePrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + poolTablePrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Buy Supr Plant (requires Pool Table)
     public void BuySuprPlant()
     {
-        if (!isSuprPlantBought && suprPlant != null && balance >= suprPlantPrice && isPoolTableBought)
+        if (!isSuprPlantBought && suprPlant != null && GameManager.suprBalance >= suprPlantPrice && isPoolTableBought)
         {
             suprPlant.SetActive(true);
             isSuprPlantBought = true;
-            balance -= suprPlantPrice;
-            GameManager.suprBalance = balance;
+            GameManager.suprBalance -= suprPlantPrice;
             UpdateButton(suprPlantButton);
-            Debug.Log("Supr Plant purchased for " + suprPlantPrice + "! New balance: " + balance);
+            Debug.Log("Supr Plant purchased for " + suprPlantPrice + "! New balance: " + GameManager.suprBalance);
         }
         else if (isSuprPlantBought)
         {
@@ -242,23 +216,21 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough balance! Need " + suprPlantPrice + ", have " + balance);
+            Debug.Log("Not enough balance! Need " + suprPlantPrice + ", have " + GameManager.suprBalance);
         }
     }
 
-    // Helper method to update button state
     private void UpdateButton(Button button)
     {
         if (button != null)
         {
-            // Get the TextMeshProUGUI component from the button's children
             TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
             if (buttonText != null)
             {
                 buttonText.text = "Bought";
                 buttonText.color = Color.red;
             }
-            button.interactable = false; // Disable the button
+            button.interactable = false;
         }
     }
 }

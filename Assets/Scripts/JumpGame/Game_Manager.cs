@@ -96,7 +96,7 @@ public class Game_Manager : MonoBehaviour
             }
         }
         
-        repaymentRatio.text = $"Repayment Ratio: {GameManager.repaymentAmount} supr/s";
+        repaymentRatio.text = $"Repayment Ratio: {GameManager.repaymentAmount * 10} supr/s";
         coinsCollectedText.text = GameManager.collectedCoins.ToString() + "/5";
         // Check if player is below camera view
         GameObject player = GameObject.FindGameObjectWithTag("Player");
