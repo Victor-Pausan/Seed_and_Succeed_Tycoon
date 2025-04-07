@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             suprBalance -= requiredCollateral;
             suprBalance += amount;
             suprBalance = RoundDownToTwoDecimals(suprBalance);
-            collateralBalance = requiredCollateral;
+            collateralBalance += requiredCollateral;
             collateralBalance = RoundDownToTwoDecimals(collateralBalance);
             loanBalance += amount;
             loanBalance = RoundDownToTwoDecimals(loanBalance);

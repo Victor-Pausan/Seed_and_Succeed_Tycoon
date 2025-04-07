@@ -15,6 +15,7 @@ TagManager:
   - JumpGame
   - LockUnderMenu
   - GameOverPanel
+  - Hoverable
   layers:
   - Default
   - TransparentFX

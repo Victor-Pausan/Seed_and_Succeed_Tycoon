@@ -17,13 +17,4 @@ public class ApplicationExit : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
-    
-    // Example: Quit when the Escape key is pressed
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            QuitApplication();
-        }
-    }
 }

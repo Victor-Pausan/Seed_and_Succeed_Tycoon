@@ -76,7 +76,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyRoomExtension()
     {
-        if (!isRoomExtended && extendedRoom != null && GameManager.suprBalance >= roomExtensionPrice && isNFTPosterBought)
+        if (!isRoomExtended && extendedRoom != null && GameManager.suprBalance >= roomExtensionPrice)
         {
             extendedRoom.SetActive(true);
             if (bed != null) bed.SetActive(false);
@@ -102,7 +102,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuySuprRug()
     {
-        if (!isSuprRugBought && suprRug != null && GameManager.suprBalance >= suprRugPrice && isRoomExtended)
+        if (!isSuprRugBought && suprRug != null && GameManager.suprBalance >= suprRugPrice)
         {
             suprRug.SetActive(true);
             isSuprRugBought = true;
@@ -126,7 +126,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyGenesisPassport()
     {
-        if (!isGenesisPassportBought && genesisPassport != null && GameManager.suprBalance >= genesisPassportPrice && isSuprRugBought)
+        if (!isGenesisPassportBought && genesisPassport != null && GameManager.suprBalance >= genesisPassportPrice)
         {
             genesisPassport.SetActive(true);
             isGenesisPassportBought = true;
@@ -150,7 +150,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuySuprTableAndChair()
     {
-        if (!isSuprTableAndChairBought && suprTableAndChair != null && GameManager.suprBalance >= suprTableAndChairPrice && isGenesisPassportBought)
+        if (!isSuprTableAndChairBought && suprTableAndChair != null && GameManager.suprBalance >= suprTableAndChairPrice)
         {
             suprTableAndChair.SetActive(true);
             isSuprTableAndChairBought = true;
@@ -174,7 +174,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyPoolTable()
     {
-        if (!isPoolTableBought && poolTable != null && GameManager.suprBalance >= poolTablePrice && isSuprTableAndChairBought)
+        if (!isPoolTableBought && poolTable != null && GameManager.suprBalance >= poolTablePrice)
         {
             poolTable.SetActive(true);
             isPoolTableBought = true;
@@ -198,7 +198,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuySuprPlant()
     {
-        if (!isSuprPlantBought && suprPlant != null && GameManager.suprBalance >= suprPlantPrice && isPoolTableBought)
+        if (!isSuprPlantBought && suprPlant != null && GameManager.suprBalance >= suprPlantPrice)
         {
             suprPlant.SetActive(true);
             isSuprPlantBought = true;
