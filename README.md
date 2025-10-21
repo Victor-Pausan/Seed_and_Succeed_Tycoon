@@ -26,7 +26,7 @@ This game aims to educate players on the core concepts of the Superseed protocol
   
 ## 🚀 Built For the Superseed Contest
 
-This project is our official entry for the **Superseed Crypto Contest**. My goal was to capture the innovative spirit of the Superseed protocol and translate its powerful financial concepts into a compelling and educational game.
+This project is my official entry for the **Superseed Crypto Contest**. My goal was to capture the innovative spirit of the Superseed protocol and translate its powerful financial concepts into a compelling and educational game.
 This game was built using the help of AI models as it was one of the contest's rules.
 
 ## 🛠️ Tech Stack
